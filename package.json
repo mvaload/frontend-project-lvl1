@@ -10,6 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/mvaload/frontend-project-lvl1.git"
   },
+  "type": "module",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
   "keywords": [
     "nodejs"
   ],
