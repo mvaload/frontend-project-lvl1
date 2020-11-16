@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/mvaload/frontend-project-lvl1/issues"
   },
-  "homepage": "https://github.com/mvaload/frontend-project-lvl1#readme"
+  "homepage": "https://github.com/mvaload/frontend-project-lvl1#readme",
+  "dependencies": {
+    "promptly": "^3.2.0"
+  }
 }
