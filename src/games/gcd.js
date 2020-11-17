@@ -1,6 +1,7 @@
 import { countRounds } from '../index.js';
 
 export const description = 'Find the greatest common divisor of given numbers.';
+export const additionalInfo = true;
 export const gameData = [];
 
 const getRandomNumber = () => {
