@@ -13,9 +13,9 @@
 * Determination of the greatest common factor.
 * Definition of a prime number.    
 
-### example of use
-[![Even](https://asciinema.org/a/Lhw8909t64mccpHSAEeFBuDBm)](https://asciinema.org/a/Lhw8909t64mccpHSAEeFBuDBm)
-[![Clac](https://asciinema.org/a/kvupMvffYXxBP9ZkeA8q14V00)](https://asciinema.org/a/kvupMvffYXxBP9ZkeA8q14V00)
-[![Gcd](https://asciinema.org/a/OGZwoEh2E0szildIYHnHpFVBs)](https://asciinema.org/a/OGZwoEh2E0szildIYHnHpFVBs)
-[![Progression](https://asciinema.org/a/C3MOOh2lMt5G5j24mdm4z3BSt)](https://asciinema.org/a/C3MOOh2lMt5G5j24mdm4z3BSt)
-[![Prime](https://asciinema.org/a/uiseeimOGucjDUPEEsn1oavQ7)](https://asciinema.org/a/uiseeimOGucjDUPEEsn1oavQ7)
+### Example of use
+* [Even asciinema](https://asciinema.org/a/Lhw8909t64mccpHSAEeFBuDBm)
+* [Clac asciinema](https://asciinema.org/a/kvupMvffYXxBP9ZkeA8q14V00)
+* [Gcd asciinema](https://asciinema.org/a/OGZwoEh2E0szildIYHnHpFVBs)
+* [Progression asciinema](https://asciinema.org/a/C3MOOh2lMt5G5j24mdm4z3BSt)
+* [Prime asciinema](https://asciinema.org/a/uiseeimOGucjDUPEEsn1oavQ7)
