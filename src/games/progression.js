@@ -1,6 +1,7 @@
 import { countRounds } from '../index.js';
 
 export const description = 'What number is missing in the progression?';
+export const additionalInfo = true;
 export const gameData = [];
 
 const getRandomNumber = (num1, num2) => {
@@ -31,4 +32,3 @@ for (let i = 0; i < countRounds; i += 1) {
   const progression = row.join(' ');
   gameData.push({ quetion: progression, answer: correctAnswer });
 }
-gameData.push({ additionalInfo: true });

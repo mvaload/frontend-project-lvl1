@@ -2,7 +2,7 @@ import promptly from 'promptly';
 
 export const countRounds = 3;
 
-export default async (gameData, description) => {
+export default async (gameData, description, additionalInfo = false) => {
   console.log('Welcome to the Brain Games!');
   const name = await promptly.prompt('May I have your name? ');
   console.log(`Hello, ${name}!`);
@@ -15,7 +15,7 @@ export default async (gameData, description) => {
     /* eslint-disable no-await-in-loop */
     const userAnswer = await promptly.prompt('Your answer: ');
     if (correctAnswer !== userAnswer) {
-      if (data.additionalInfo) {
+      if (additionalInfo) {
         console.log(`Question: ${data.quetion}!`);
         console.log(`Your answer: ${userAnswer}`);
       }

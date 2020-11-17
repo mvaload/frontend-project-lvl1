@@ -1,6 +1,7 @@
 import { countRounds } from '../index.js';
 
 export const description = 'What is the result of the expression?';
+export const additionalInfo = true;
 export const gameData = [];
 
 const operators = ['+', '-', '*'];
