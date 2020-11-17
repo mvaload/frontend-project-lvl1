@@ -12,6 +12,7 @@ export default async (gameData, description) => {
   for (const data of gameData) {
     console.log(`Question: ${data.quetion}`);
     const correctAnswer = data.answer;
+    /* eslint-disable no-await-in-loop */
     const userAnswer = await promptly.prompt('Your answer: ');
     if (correctAnswer !== userAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
