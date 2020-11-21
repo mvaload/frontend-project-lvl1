@@ -1,7 +1,6 @@
-import { countRounds } from '../index.js';
+import { countRounds, startGame } from '../index.js';
 
-export const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-export const gameData = [];
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const getRandomNumber = () => Math.floor(Math.random() * Math.floor(100));
 
@@ -23,8 +22,13 @@ const isPrime = (num) => {
   return true;
 };
 
-for (let i = 0; i < countRounds; i += 1) {
-  const number = getRandomNumber();
-  const correctAnswer = isPrime(number) ? 'yes' : 'no';
-  gameData.push({ quetion: number, answer: correctAnswer });
-}
+export default () => {
+  const gameData = [];
+  for (let i = 0; i < countRounds; i += 1) {
+    const number = getRandomNumber();
+    const correctAnswer = isPrime(number) ? 'yes' : 'no';
+    gameData.push({ quetion: number, answer: correctAnswer });
+  }
+  startGame(gameData, description);
+};
+

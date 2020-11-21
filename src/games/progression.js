@@ -1,8 +1,7 @@
-import { countRounds } from '../index.js';
+import { countRounds, startGame } from '../index.js';
 
-export const description = 'What number is missing in the progression?';
-export const additionalInfo = true;
-export const gameData = [];
+const description = 'What number is missing in the progression?';
+const additionalInfo = true;
 
 const getRandomNumber = (num1, num2) => {
   const min = Math.ceil(num1);
@@ -20,15 +19,19 @@ const makeProgression = (length, start, step) => {
   return row;
 };
 
-const rowLength = 10;
+export default () => {
+  const gameData = [];
+  const rowLength = 10;
+  for (let i = 0; i < countRounds; i += 1) {
+    const start = getRandomNumber(0, 90);
+    const step = getRandomNumber(2, 10);
+    const hiddenElement = getRandomNumber(0, 9);
+    const row = makeProgression(rowLength, start, step);
+    const correctAnswer = String(row[hiddenElement]);
+    row[hiddenElement] = '..';
+    const progression = row.join(' ');
+    gameData.push({ quetion: progression, answer: correctAnswer });
+  }
+  startGame(gameData, description, additionalInfo);
+};
 
-for (let i = 0; i < countRounds; i += 1) {
-  const start = getRandomNumber(0, 90);
-  const step = getRandomNumber(2, 10);
-  const hiddenElement = getRandomNumber(0, 9);
-  const row = makeProgression(rowLength, start, step);
-  const correctAnswer = String(row[hiddenElement]);
-  row[hiddenElement] = '..';
-  const progression = row.join(' ');
-  gameData.push({ quetion: progression, answer: correctAnswer });
-}

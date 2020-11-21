@@ -1,8 +1,7 @@
-import { countRounds } from '../index.js';
+import { countRounds, startGame } from '../index.js';
 
-export const description = 'Find the greatest common divisor of given numbers.';
-export const additionalInfo = true;
-export const gameData = [];
+const description = 'Find the greatest common divisor of given numbers.';
+const additionalInfo = true;
 
 const getRandomNumber = () => {
   const min = Math.ceil(2);
@@ -23,11 +22,15 @@ const getGcd = (num1, num2) => {
   return a + b;
 };
 
-for (let i = 0; i < countRounds; i += 1) {
-  const number1 = getRandomNumber();
-  const number2 = getRandomNumber();
-  const pairNumbers = `${number1} ${number2}`;
-  const correctAnswer = String(getGcd(number1, number2));
+export default () => {
+  const gameData = [];
+  for (let i = 0; i < countRounds; i += 1) {
+    const number1 = getRandomNumber();
+    const number2 = getRandomNumber();
+    const pairNumbers = `${number1} ${number2}`;
+    const correctAnswer = String(getGcd(number1, number2));
+    gameData.push({ quetion: pairNumbers, answer: correctAnswer });
+  }
+  startGame(gameData, description, additionalInfo);
+};
 
-  gameData.push({ quetion: pairNumbers, answer: correctAnswer });
-}
