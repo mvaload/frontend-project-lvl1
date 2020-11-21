@@ -2,7 +2,6 @@ import { countRounds, startGame } from '../index.js';
 import getRandomNumber from '../utils.js';
 
 const description = 'What is the result of the expression?';
-const additionalInfo = true;
 const operators = ['+', '-', '*'];
 
 const calculate = (operator1, operator2, operand) => {
@@ -28,5 +27,5 @@ export default () => {
     const correctAnswer = String(calculate(number1, number2, sign));
     gameData.push({ quetion: expression, answer: correctAnswer });
   }
-  startGame(gameData, description, additionalInfo);
+  startGame(gameData, description);
 };

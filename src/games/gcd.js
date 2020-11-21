@@ -2,7 +2,6 @@ import { countRounds, startGame } from '../index.js';
 import getRandomNumber from '../utils.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
-const additionalInfo = true;
 
 const getGcd = (num1, num2) => {
   let a = num1;
@@ -26,5 +25,5 @@ export default () => {
     const correctAnswer = String(getGcd(number1, number2));
     gameData.push({ quetion: pairNumbers, answer: correctAnswer });
   }
-  startGame(gameData, description, additionalInfo);
+  startGame(gameData, description);
 };

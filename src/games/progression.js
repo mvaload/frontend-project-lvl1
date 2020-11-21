@@ -2,7 +2,6 @@ import { countRounds, startGame } from '../index.js';
 import getRandomNumber from '../utils.js';
 
 const description = 'What number is missing in the progression?';
-const additionalInfo = true;
 
 const makeProgression = (length, start, step) => {
   const progression = [];
@@ -27,5 +26,5 @@ export default () => {
     const quetion = progression.join(' ');
     gameData.push({ quetion, answer: correctAnswer });
   }
-  startGame(gameData, description, additionalInfo);
+  startGame(gameData, description);
 };
