@@ -1,5 +1,5 @@
 import { countRounds, startGame } from '../index.js';
-import { getRandomNumber } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
 const description = 'What is the result of the expression?';
 const additionalInfo = true;
@@ -14,7 +14,7 @@ const calculate = (operator1, operator2, operand) => {
     case '*':
       return operator1 * operator2;
     default:
-      return;
+      throw new Error(`Unknown: '${operand}'`);
   }
 };
 
