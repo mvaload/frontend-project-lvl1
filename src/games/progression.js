@@ -1,13 +1,8 @@
 import { countRounds, startGame } from '../index.js';
+import { getRandomNumber } from '../utils.js';
 
 const description = 'What number is missing in the progression?';
 const additionalInfo = true;
-
-const getRandomNumber = (num1, num2) => {
-  const min = Math.ceil(num1);
-  const max = Math.floor(num2);
-  return Math.floor(Math.random() * (max - min)) + min;
-};
 
 const makeProgression = (length, start, step) => {
   const row = [];

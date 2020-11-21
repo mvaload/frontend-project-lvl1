@@ -1,15 +1,11 @@
 import { countRounds, startGame } from '../index.js';
+import { getRandomNumber } from '../utils.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
-const getRandomNumber = () => Math.floor(Math.random() * Math.floor(100));
 
 const isPrime = (num) => {
   if (num < 2) {
     return false;
-  }
-  if (num === 2) {
-    return true;
   }
   const limit = Math.sqrt(num);
   let i = 2;
@@ -25,7 +21,7 @@ const isPrime = (num) => {
 export default () => {
   const gameData = [];
   for (let i = 0; i < countRounds; i += 1) {
-    const number = getRandomNumber();
+    const number = getRandomNumber(2, 100);
     const correctAnswer = isPrime(number) ? 'yes' : 'no';
     gameData.push({ quetion: number, answer: correctAnswer });
   }
