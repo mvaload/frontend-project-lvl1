@@ -6,18 +6,16 @@ const additionalInfo = true;
 const operators = ['+', '-', '*'];
 
 const calculate = (operator1, operator2, operand) => {
-  let result = 0;
   switch (operand) {
-    case '+': result = operator1 + operator2;
-      break;
-    case '-': result = operator1 - operator2;
-      break;
-    case '*': result = operator1 * operator2;
-      break;
+    case '+':
+      return operator1 + operator2;
+    case '-':
+      return operator1 - operator2;
+    case '*':
+      return operator1 * operator2;
     default:
-      break;
+      return;
   }
-  return result;
 };
 
 export default () => {
@@ -25,7 +23,6 @@ export default () => {
   for (let i = 0; i < countRounds; i += 1) {
     const number1 = getRandomNumber(0, 50);
     const number2 = getRandomNumber(0, 50);
-    console.log(operators.length - 1);
     const sign = operators[getRandomNumber(0, operators.length - 1)];
     const expression = `${number1} ${sign} ${number2}`;
     const correctAnswer = String(calculate(number1, number2, sign));
@@ -33,4 +30,3 @@ export default () => {
   }
   startGame(gameData, description, additionalInfo);
 };
-
